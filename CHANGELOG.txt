@@ -1,6 +1,7 @@
 File_Entity_Inline 7.x-1.x-dev, xxxx-xx-xx
 ------------------------------------------
 #3153998 by DamienMcKenna: Add a CHANGELOG.txt file.
+#3153996 by DamienMcKenna: Add a README.txt file.
 
 
 File_Entity_Inline 7.x-1.0-beta1, 2012-09-29
