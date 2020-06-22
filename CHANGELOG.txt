@@ -1,0 +1,11 @@
+File_Entity_Inline 7.x-1.x-dev, xxxx-xx-xx
+------------------------------------------
+#3153998 by DamienMcKenna: Add a CHANGELOG.txt file.
+
+
+File_Entity_Inline 7.x-1.0-beta1, 2012-09-29
+--------------------------------------------
+By quicksketch: Initial commit.
+By quicksketch: Rewriting to use submit handler instead of validate. Extensible
+  widget hook.
+By quicksketch: Adding options for configuring on a per-field basis.
