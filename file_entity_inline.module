@@ -46,7 +46,7 @@ function file_entity_inline_file_field_widget_form_alter($element, &$form_state,
   $widget_settings = $instance['widget']['settings'];
 
   // Bail out if inline file entities are not enabled on this field.
-  if (isset($widget_settings['file_entity_inline']) && $widget_settings['file_entity_inline'] === FILE_ENTITY_INLINE_NONE) {
+  if (isset($widget_settings['file_entity_inline']) && $widget_settings['file_entity_inline'] == FILE_ENTITY_INLINE_NONE) {
     return $element;
   }
 
@@ -58,7 +58,7 @@ function file_entity_inline_file_field_widget_form_alter($element, &$form_state,
   field_attach_form('file', $file, $element['entity'], $form_state, $element['#language']);
 
   // Reduce the display of fields if only display specific fields.
-  if (isset($widget_settings['file_entity_inline']) && $widget_settings['file_entity_inline'] === FILE_ENTITY_INLINE_SOME) {
+  if (isset($widget_settings['file_entity_inline']) && $widget_settings['file_entity_inline'] == FILE_ENTITY_INLINE_SOME) {
     $disabled_fields = array_diff(element_children($element['entity']), $widget_settings['file_entity_inline_fields']);
     foreach ($disabled_fields as $form_key) {
       $element['entity'][$form_key]['#access'] = FALSE;
