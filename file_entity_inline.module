@@ -50,6 +50,22 @@ function file_entity_inline_file_field_widget_form_alter($element, &$form_state,
     return $element;
   }
 
+  // The File Entity module adds some extra requirements that will not be added
+  // by the Plupload module, so manually append all values from the file_managed
+  // table to the $file object.
+  if (!isset($file->type)) {
+    // Fill out the file object so that it has all of the expected data.
+    $query = db_query('SELECT * FROM {file_managed} WHERE fid = :fid', array(
+      ':fid' => $file->fid,
+    ));
+    $results = $query->fetchAssoc();
+    if (!empty($results)) {
+      foreach ($results as $key => $val) {
+        $file->{$key} = $val;
+      }
+    }
+  }
+
   // Add the entity form for the file.
   $element['entity'] = array(
     '#weight' => 10,
