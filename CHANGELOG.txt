@@ -1,4 +1,4 @@
-File_Entity_Inline 7.x-1.x-dev, xxxx-xx-xx
+File_Entity_Inline 7.x-1.0-rc2, 2020-06-29
 ------------------------------------------
 #3155549 by DamienMcKenna: Missing file attributes when using Plupload module.
 
