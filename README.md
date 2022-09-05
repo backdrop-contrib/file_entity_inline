@@ -8,6 +8,8 @@ Project Status
 We ran this project through [Coder Upgrade](https://backdropcms.org/project/coder_upgrade)
 and made a few small changes. We're still testing and fixing bugs.
 
+Please help test this module and report bugs in the [issue queue](https://github.com/backdrop-contrib/file_entity_inline/issues).
+
 Maintainers
 -----------
 
