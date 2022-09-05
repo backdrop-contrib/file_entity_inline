@@ -25,7 +25,6 @@ Credits
 
 - Support for this module provided by [Simplo.site](https://www.simplo.site)
 - Initial port by [Alomgir Hossain](https://github.com/bdalomgir)
-
 - Initial development for Drupal by [Nate Lampton](https://www.drupal.org/u/quicksketch)
 - Recently maintained for Drupal by [Damien McKenna](https://www.drupal.org/u/damienmckenna)
 
