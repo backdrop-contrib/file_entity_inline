@@ -3,34 +3,33 @@ File Entity Inline
 This module allows controlling which fields on a File Entity object can be
 modified when editing that entity through other forms, e.g. reference fields.
 
-
-Dependencies
---------------------------------------------------------------------------------
-The following modules are requird:
-
-* CTools
-  https://www.drupal.org/project/ctools
-* File Entity
-  https://www.drupal.org/project/file_entity
+Project Status
+----------------
+We ran this project through [Coder Upgrade](https://backdropcms.org/project/coder_upgrade)
+and made a few small changes. We're still testing and fixing bugs.
 
 
+Credits
+---------------------------------
+Ported to Backdrop CMS by @bdalomgir
 
-Configuration
---------------------------------------------------------------------------------
-TBD
+Maintained by @stpaultim (supported by Simplo)
 
+Maintainers
+-----------
 
-Credits / contact
---------------------------------------------------------------------------------
-Originally written by Nate Lampton [1]. Currently maintained by Damien McKenna
-[2].
+- [Tim Erickson (stpaultim)](https://github.com/stpaultim)
 
-The best way to contact the authors is to submit an issue, be it a support
-request, a feature request or a bug report, in the project issue queue:
-  https://www.drupal.org/project/issues/file_entity_inline?categories=All
+Credits
+-----------
 
+- Support for this module provided by [Simplo.site](https://www.simplo.site)
+- Initial port by [Alomgir Hossain](https://github.com/bdalomgir)
 
-References
---------------------------------------------------------------------------------
-1: https://www.drupal.org/u/quicksketch
-2: https://www.drupal.org/u/damienmckenna
+- Initial development for Drupal by [Nate Lampton](https://www.drupal.org/u/quicksketch)
+- Recently maintained for Drupal by [Damien McKenna](https://www.drupal.org/u/damienmckenna)
+
+License
+-------
+
+This project is GPL v2 software. See the LICENSE.txt file in this directory for complete text.
