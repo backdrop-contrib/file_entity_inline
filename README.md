@@ -8,13 +8,6 @@ Project Status
 We ran this project through [Coder Upgrade](https://backdropcms.org/project/coder_upgrade)
 and made a few small changes. We're still testing and fixing bugs.
 
-
-Credits
----------------------------------
-Ported to Backdrop CMS by @bdalomgir
-
-Maintained by @stpaultim (supported by Simplo)
-
 Maintainers
 -----------
 
