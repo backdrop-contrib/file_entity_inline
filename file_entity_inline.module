@@ -26,9 +26,9 @@ function file_entity_inline_field_widget_form_alter(&$element, &$form_state, $co
 function file_entity_inline_file_field_widget_form_alter($element, &$form_state, $instance) {
   // We need to add #process callback due to 2 reasons:
   // 1. Entire $form is not available in hook_field_widget_form_alter().
-  // 2. Walkaround on Drupal core bug. We need to change how file widget submit
-  //    callback searches for the submitted values.
-  //    See: http://drupal.org/node/1468686
+  // 2. Walkaround on Backdrop core bug. We need to change how file widget submit
+//    callback searches for the submitted values.
+//    See: http://drupal.org/node/1468686
   $element['#process'] = array_merge($element['#process'], array('file_entity_inline_field_widget_process'));
 
   // Only act on entity forms, and when a file has been uploaded.
@@ -88,7 +88,7 @@ function file_entity_inline_file_field_widget_form_alter($element, &$form_state,
  * An element #process callback for the file field widget.
  */
 function file_entity_inline_field_widget_process($element, &$form_state, &$form) {
-  // Walkaround on Drupal core bug.
+  // Walkaround on Backdrop core bug.
   // See: http://drupal.org/node/1468686
   foreach (array('upload_button', 'remove_button') as $key) {
     foreach ($element[$key]['#submit'] as $delta => $submit) {
@@ -128,17 +128,17 @@ function file_entity_inline_field_widget_submit($form, &$form_state) {
   // have #default_value set appropriately for the current state of the field,
   // so nothing is lost in doing this.
   $parents = array_slice($form_state['triggering_element']['#parents'], 0, -2);
-  drupal_array_set_nested_value($form_state['input'], $parents, NULL);
+  backdrop_array_set_nested_value($form_state['input'], $parents, NULL);
 
   $button = $form_state['triggering_element'];
 
   // Go one level up in the form, to the widgets container.
-  $element = drupal_array_get_nested_value($form, array_slice($button['#array_parents'], 0, -1));
+  $element = backdrop_array_get_nested_value($form, array_slice($button['#array_parents'], 0, -1));
   $field_name = $element['#field_name'];
   $langcode = $element['#language'];
   $parents = $element['#field_parents'];
 
-  $submitted_values = drupal_array_get_nested_value($form_state['values'], array_slice($button['#parents'], 0, -2));
+  $submitted_values = backdrop_array_get_nested_value($form_state['values'], array_slice($button['#parents'], 0, -2));
   foreach ($submitted_values as $delta => $submitted_value) {
     if (!$submitted_value['fid']) {
       unset($submitted_values[$delta]);
@@ -149,7 +149,7 @@ function file_entity_inline_field_widget_submit($form, &$form_state) {
   $submitted_values = array_values($submitted_values);
 
   // Update form_state values.
-  drupal_array_set_nested_value($form_state['values'], array_slice($button['#parents'], 0, -2), $submitted_values);
+  backdrop_array_set_nested_value($form_state['values'], array_slice($button['#parents'], 0, -2), $submitted_values);
 
   // Update items.
   $field_state = field_form_get_state($parents, $field_name, $langcode, $form_state);
@@ -299,7 +299,7 @@ function file_entity_inline_widgets($reset = FALSE) {
       }
       $widgets = array_merge($widgets, $module_widgets);
     }
-    drupal_alter('file_entity_inline_widgets', $widgets);
+    backdrop_alter('file_entity_inline_widgets', $widgets);
   }
 
   return $widgets;

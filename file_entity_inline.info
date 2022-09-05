@@ -1,8 +1,9 @@
 name = File entity inline
 description = "Makes field entities editable within other entities."
 package = Media
-core = 7.x
-dependencies[] = file_entity
+backdrop = 1.x
+type = module
+dependencies[] = file
 dependencies[] = field
-dependencies[] = ctools
+;dependencies[] = ctools
 configure = admin/structure/types
