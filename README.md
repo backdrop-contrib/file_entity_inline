@@ -1,12 +1,14 @@
 File Entity Inline
 ------------------
-This module allows controlling which fields on a File Entity object can be
-modified when editing that entity through other forms, e.g. reference fields.
+If you add fields to a file type, such as the image file type, by default these fields are only 
+accessible through the manage files interface in Backdrop CMS Core. This module exposes these
+additional fields and allows a site editor to manage them throught other forms, such as node
+edit forms or reference fields. 
 
 Project Status
 ----------------
 We ran this project through [Coder Upgrade](https://backdropcms.org/project/coder_upgrade)
-and made a few small changes. We're still testing and fixing bugs.
+and made a few small changes. There are no known bugs at the time of the initial beta release.
 
 Please help test this module and report bugs in the [issue queue](https://github.com/backdrop-contrib/file_entity_inline/issues).
 
