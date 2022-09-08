@@ -12,6 +12,14 @@ and made a few small changes. There are no known bugs at the time of the initial
 
 Please help test this module and report bugs in the [issue queue](https://github.com/backdrop-contrib/file_entity_inline/issues).
 
+Instructions
+-----------
+1) Install this module using the official Backdrop CMS instructions at
+https://backdropcms.org/guide/modules
+2) Add custom fields to any file type (admin/structure/file-types).
+3) Add an image or file field with custom fields to any content type (admin/structure/types).
+4) In the field configuration for the content type, select the custom file fields you would like to expose on other forms. See "Inline fields." By default "All available fields" are selected.
+
 Maintainers
 -----------
 
