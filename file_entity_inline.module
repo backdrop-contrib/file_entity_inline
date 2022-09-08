@@ -71,6 +71,7 @@ function file_entity_inline_file_field_widget_form_alter($element, &$form_state,
     '#weight' => 10,
     '#parents' => array('files', $file->fid),
   );
+  $file = file_load($file->fid);
   field_attach_form('file', $file, $element['entity'], $form_state, $element['#language']);
 
   // Reduce the display of fields if only display specific fields.
