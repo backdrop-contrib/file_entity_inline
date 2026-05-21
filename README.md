@@ -1,5 +1,8 @@
 File Entity Inline
 ------------------
+
+⚠️ **Status:** The functionality that this module provides has been included in Backdrop core as of version 1.34.0, so this module is no longer required.
+
 If you add fields to a file type, such as the image file type, by default these fields are only 
 accessible through the manage files interface in Backdrop CMS Core. This module exposes these
 additional fields and allows a site editor to manage them through other forms, such as node
